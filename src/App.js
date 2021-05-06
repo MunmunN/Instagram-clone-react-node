@@ -23,7 +23,7 @@ function App() {
   useEffect(()=>{
     // creating Async function to wait untill we get all the data from the server
     async function getData(){
-      const res=await axios.get('http://localhost:4000/')
+      const res=await axios.get('https://instagram-clone-mern-munmun.herokuapp.com')
       //setting the posts
       setPosts(res);
     }

@@ -47,7 +47,7 @@ function Signupmodal2({user,setUser}){//getiing the props from authentication (p
           password:password
         }
         //Sending a post request to create a new user in mongo DB
-        axios.post('http://localhost:4000/new_user',newuser)
+        axios.post('https://instagram-clone-mern-munmun.herokuapp.com/new_user',newuser)
         .then((res)=>{
           setUser(res.data[0].username)
         })

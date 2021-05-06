@@ -22,7 +22,7 @@ function Post({signedinUser,postId,username,caption,imageurl,comments}){
             text:comment
         }
         //Sending the post request to the node API to store the new comment in the database
-        axios.post('http://localhost:4000/comments',newcomment)
+        axios.post('https://instagram-clone-mern-munmun.herokuapp.com/comments',newcomment)
         setComment('');//Clear the comment input box
     }
     // Function to delete the comment
@@ -30,7 +30,7 @@ function Post({signedinUser,postId,username,caption,imageurl,comments}){
         e.preventDefault();
         const commentId=e.target.dataset.id;//getting the id from comment
         //Sending the post request to delete the comment having commenID from the mongo DB
-        axios.post('http://localhost:4000/delete',{commentId:commentId})
+        axios.post('https://instagram-clone-mern-munmun.herokuapp.com/delete',{commentId:commentId})
         .then(()=>{
             console.log("Comment Deleted");
         })

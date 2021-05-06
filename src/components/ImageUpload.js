@@ -84,7 +84,7 @@ function ImageUpload({username,openImageUpload,setopenImageUpload}){//getting lo
 
                     }
                     //db.collection("posts").add(newpost)//adding post into the firebase
-                    axios.post('http://localhost:4000/upload', newpost)
+                    axios.post('https://instagram-clone-mern-munmun.herokuapp.com/upload', newpost)
                     .then(res=>{
                         console.log(res);
                     })

@@ -45,7 +45,7 @@ function Signinmodal({user,setUser,setToken}){
           email:email,
           password:password
         }
-        axios.post('http://localhost:4000/login',newuser)
+        axios.post('https://instagram-clone-mern-munmun.herokuapp.com/login',newuser)
         .then((res)=>{
           setToken(res.data.token)
           setUser(res.data.username)

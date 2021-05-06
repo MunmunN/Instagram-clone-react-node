@@ -29,14 +29,14 @@ function Authentication(props){
     return(
         <div>
             {/* if user signedin and click on image upload button the open image upload modal */}
-            {(user||props.token)? (//if user is signed in or token available
+            {(user && props.token)? (//if user is signed in and token available
                openImageUpload && //and click on the image upload button
                 <ImageUpload username={user}openImageUpload={openImageUpload} setopenImageUpload={setopenImageUpload}></ImageUpload>  //then show me the images
             ):(
               <h3>you need to login to upload</h3>
             )}
             {/* if user logged in, show logout and imageupload button, else show signin and signup button */}
-            {(user||props.token)?(
+            {(user&&props.token)?(
                 <div className="container">
                     {/* SIGNED IN USER AVATAR */}
                     <Avatar style={{height: '50px', width: '50px'}} className="post_avatar"alt={user} src="image.jpg" />
